@@ -1,12 +1,12 @@
 # Invoice Dashboard
 
-A simple single-page TypeScript React application that generates random invoices with names, amounts, dates, and statuses.
+A simple single-page TypeScript React application that generates random invoices with IDs, customer names, amounts, dates, and statuses.
 
 ## Features
 
 - Random invoice generation with realistic data
 - Display of invoice details including:
-  - Invoice ID
+  - Invoice ID (unique identifier)
   - Customer Name
   - Amount (formatted as currency)
   - Date
