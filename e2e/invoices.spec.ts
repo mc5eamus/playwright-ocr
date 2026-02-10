@@ -10,11 +10,12 @@ test.describe('Invoice Management System', () => {
   });
 
   test('should render the summary bar with totals', async ({ page }) => {
-    await expect(page.getByText('Total Invoices')).toBeVisible();
-    await expect(page.getByText('Total Amount')).toBeVisible();
-    await expect(page.getByText('Paid')).toBeVisible();
-    await expect(page.getByText('Pending')).toBeVisible();
-    await expect(page.getByText('Overdue')).toBeVisible();
+    const summaryBar = page.locator('.summary-bar');
+    await expect(summaryBar.getByText('Total Invoices')).toBeVisible();
+    await expect(summaryBar.getByText('Total Amount')).toBeVisible();
+    await expect(summaryBar.getByText('Paid')).toBeVisible();
+    await expect(summaryBar.getByText('Pending')).toBeVisible();
+    await expect(summaryBar.getByText('Overdue')).toBeVisible();
   });
 
   test('should render the invoice table with column headers', async ({ page }) => {
