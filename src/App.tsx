@@ -19,7 +19,7 @@ function generateInvoices(): Invoice[] {
     customer: faker.person.fullName(),
     amount: faker.finance.amount({ min: 100, max: 10000, dec: 2 }),
     date: faker.date.recent({ days: 90 }),
-    status: statuses[Math.floor(Math.random() * statuses.length)],
+    status: faker.helpers.arrayElement(statuses),
     notes: faker.lorem.sentence(),
   }));
 }
